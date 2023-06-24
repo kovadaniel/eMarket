@@ -1,0 +1,31 @@
+.button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+.line{
+    position: relative;
+    width: 25px;
+    margin: 0 auto 0;
+}
+
+.line::after, .line:before{
+    content: "";
+    border: 1px solid transparent;
+    background: white;
+    width: 25px;
+    position: absolute;
+    transition: .5s;
+}
+.line::before{
+    bottom: 6.25px;
+}
+.line::after{
+    top: 6.25px;
+}

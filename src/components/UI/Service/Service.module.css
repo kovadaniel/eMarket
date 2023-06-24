@@ -1,0 +1,36 @@
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.iconWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background: #d1c286;
+    margin: 0 auto 30px auto;
+    border-radius: 50%;
+}
+.icon{
+    font-size: 36px;
+    color: white;
+}
+.title{
+    color: black;
+    text-align: center;
+    font-size: 15px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.description{
+    text-align: center;
+    font-size: 15px;
+
+}

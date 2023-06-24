@@ -1,0 +1,29 @@
+.container{
+
+}
+.inscription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    text-align: center;
+    padding: 0 20px 0;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.ref{
+    text-decoration: none;
+    color: #d1c286;
+    transition: 0.5s;
+}
+
+.ref::before, .ref::after{
+    content: ' ';
+}

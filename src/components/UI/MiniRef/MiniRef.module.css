@@ -1,0 +1,17 @@
+.reference{
+    padding: 7px 10px;
+    color: #fff;
+    background: #d1c286;
+    margin: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.reference:hover{
+    color: #d1c286;
+    background: #fff;
+}
+
+.icon{
+    font-size: 16px;
+}

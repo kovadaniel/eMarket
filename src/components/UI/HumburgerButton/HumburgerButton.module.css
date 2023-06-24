@@ -1,0 +1,43 @@
+.button{
+    padding: 20px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.icon{
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    color: #252525;
+    font: bold 14px/.4 Helvetica;
+    text-transform: uppercase;
+    text-indent: -55px;
+    background: #252525;
+    transition: all .2s ease-out;
+}
+
+.icon::before, .icon::after{
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #252525;
+    position: absolute;
+    left: 0;
+    transition: all .2s ease-out;
+}
+.icon::before{
+    bottom: 7px;
+} 
+.icon::after{
+    top: 7px;
+}
+
+.button:hover .icon::before{
+    bottom: 10px;
+} 
+.button:hover .icon::after{
+    top: 10px;
+}

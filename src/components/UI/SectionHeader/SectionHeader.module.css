@@ -1,0 +1,31 @@
+.container{
+    width: 66%;
+    margin: -15px auto -15px;
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.inscription{
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.title{
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.body{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #828282;
+}

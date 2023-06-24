@@ -1,0 +1,33 @@
+.slider{
+    height: 100%;
+    position: relative;
+}
+
+
+.filter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .7s;
+    background: rgba(0, 0, 0, 0.02);
+
+}
+
+
+.description{
+    display: flex;
+    position: relative;
+    margin: 0 auto 0;
+    height: 100%;
+}
+
+@media (min-width: 770px) {
+    .description{
+        width: 750px;
+    }
+}
+@media (min-width: 990px){
+    .description{
+        width: 970px;
+    }
+} 

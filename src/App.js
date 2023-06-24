@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import './styles/App.css';
+import Main from './pages/Main';
+import { useState } from 'react';
+import { DisplayContext } from './context';
+import SideMenu from "./components/UI/SideMenu/SideMenu";
+import useView from './hooks/useView';
+import Footer from './components/Footer';
+import About from './pages/About';
+import Single from './pages/Single';
+import AppRouter from './components/AppRouter';
 
 function App() {
+  const [showSideMenu, setShowSideMenu] = useState(false);
+  const [mobileView, setMobileView] = useState(false);
+  
+  useView(mobileView, setMobileView);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DisplayContext.Provider 
+      value={{showSideMenu, setShowSideMenu, mobileView}}>
+      <div className='App'>
+        <Navbar/>
+        <SideMenu/>
+
+        <BrowserRouter>
+          <AppRouter/>
+        </BrowserRouter>
+
+        <Footer/>
+      </div>
+    </DisplayContext.Provider>
   );
 }
 
