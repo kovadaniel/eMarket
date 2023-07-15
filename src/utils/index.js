@@ -39,6 +39,7 @@ export function truncateText(text, size){
  * @returns {[{id: <number>, amount: <number>}]} 
  */
 export function parseStorage(storage = ''){
+    if(!storage) return [];
     console.log('[parseStorage] storage:', storage);
     const productsData = storage.split(' ').slice(1); 
     // use .slice(1) to remove initial value of localStorage.cart = ''
@@ -96,7 +97,7 @@ export function removeFromStorage(id, storage){
 export function amountInCart(storage){
     console.log('[amountInCart] storage:', storage);
 
-    if(storage === '') return 0;
+    if(!storage) return 0;
     const nmbrs= storage.split(' ').slice(1);
     const numbers = nmbrs.map(productInfo => productInfo.split('-')[1]);
     const total = numbers.reduce((acc, cur) => parseInt(acc) + parseInt(cur), 0)
@@ -108,7 +109,7 @@ export function amountInCart(storage){
  */
 export function productsInCart(id, storage){
     console.log('[productsInCart] storage:', storage);
-    if(storage === '') return 0;
+    if(!storage) return 0;
     const nmbrs = storage.split(' ').slice(1);
     for(const productInfo of nmbrs){
         const info = productInfo.split('-');
