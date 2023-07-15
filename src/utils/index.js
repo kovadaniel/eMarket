@@ -39,6 +39,7 @@ export function truncateText(text, size){
  * @returns {[{id: <number>, amount: <number>}]} 
  */
 export function parseStorage(storage = ''){
+    console.log('[parseStorage] storage:', storage);
     const productsData = storage.split(' ').slice(1); 
     // use .slice(1) to remove initial value of localStorage.cart = ''
     // without it we get additional ghost-product with {id: '', amount: undefined}
@@ -93,6 +94,8 @@ export function removeFromStorage(id, storage){
  * this function counts amount of products in the cart from localStorage
  */
 export function amountInCart(storage){
+    console.log('[amountInCart] storage:', storage);
+
     if(storage === '') return 0;
     const nmbrs= storage.split(' ').slice(1);
     const numbers = nmbrs.map(productInfo => productInfo.split('-')[1]);
@@ -104,6 +107,7 @@ export function amountInCart(storage){
  * this function returns amount of a given product-id in the cart from localStorage
  */
 export function productsInCart(id, storage){
+    console.log('[productsInCart] storage:', storage);
     if(storage === '') return 0;
     const nmbrs = storage.split(' ').slice(1);
     for(const productInfo of nmbrs){
