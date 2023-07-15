@@ -10,6 +10,7 @@ export const privateRoutes = [
 
 ]
 
+
 export const publicRoutes = [
     {path: '/about', component: <About/>, },
     {path: '/single/:id', component: <Single/>, },
