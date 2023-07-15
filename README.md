@@ -1,26 +1,3 @@
-# Overview
-
-this projects is an example of internet market written in React. 
-It uses a free server API: https://fakestoreapi.com
-Animation is performed mostly by 'Framer Motion' React libarary. And in some cases with 'React Transition Group'
-It includes pages: 
-1. '/main' page that loads automatically and has two sliders (one of them is draggable), 
-    some products and some other sections
-2. '/about' page that contains some information about company
-3. '/products' page that includes all products in the shop
-4. '/products/[category]' pages that include only products from a chose category
-5. '/single' page - a page for individual product with information about it
-
-Этот проект является примером интернет-магазина, написанного на React.
-Он использует бесплатный сервер с API: https://fakestoreapi.com
-Анимация реализованас помощью библиотеки React "Frame Motion". И в некоторых случаях с "React Transition Group"
-Сайт состоит из следующих страниц:
-1. страница "main", которая загружаются автоматически при переходе на сайт. На ней 2 слайдера, некоторые товары с списке и некоторые другие разделы
-2. страница "/about", содержащую некоторую информацию о компании
-3. страница "/products", которая включает в себя все товары в магазине
-4. страница "/products/[category]", содержащая только товары из выбранной категории
-5. страница "/single" - страница для отдельного продукта с информацией о нем
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,19 @@
+.button{
+    padding: 10px;
+    background-color: transparent;
+    border: 0;
+    font: inherit;
+    transition: all .3s;
+}
+.button:active{
+    color: #4d4d4d;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+.title{
+    color: inherit;
+    margin-left: 7px;
+    font-size: 13px;
+}

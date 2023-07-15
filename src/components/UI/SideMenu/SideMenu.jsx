@@ -7,9 +7,10 @@ import Search from '../../Search';
 import Cart from '../../Cart';
 import CloseButton from '../CloseButton/CloseButton';
 import { CSSTransition } from 'react-transition-group';
+import { amountInCart } from '../../../utils';
 
 function SideMenu({...props}) {
-    const {showSideMenu, setShowSideMenu} = useContext(DisplayContext);
+    const {showSideMenu, setShowSideMenu, cart} = useContext(DisplayContext);
 
     return (
         <div {...props} onClick={() => setShowSideMenu(false)}>
@@ -20,7 +21,7 @@ function SideMenu({...props}) {
                 <div id='side-menu' className={cl.menu} onClick={e => e.stopPropagation()}>
                     <NavRefs/>
                     <Search/>
-                    <Cart/>
+                    <Cart value={amountInCart(cart)}/>
                 </div>
             </CSSTransition>
             <CSSTransition in={showSideMenu} timeout={500} mountOnEnter unmountOnExit>

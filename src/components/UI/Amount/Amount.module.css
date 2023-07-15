@@ -1,0 +1,33 @@
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,0.04);
+    border-radius: 10px;
+
+    font-size: 20px;
+    color: rgba(0,0,0,.8);
+}
+
+.increment, .decrement{
+    background-color: transparent;
+    border: 0;
+    font: inherit;
+    padding: 6px 16px;
+    border-radius: 10px;
+}
+.increment:hover, .decrement:hover{
+    cursor: pointer;
+}
+.decrement:active{
+    box-shadow: inset 3px 2px 2px rgba(0,0,0,0.04);
+}
+.increment:active{
+    box-shadow: inset -3px 2px 2px rgba(0,0,0,0.04);
+}
+
+
+.number{
+    margin-top: -5px;
+}

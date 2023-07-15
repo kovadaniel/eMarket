@@ -8,3 +8,10 @@ root.render(
     <App /> 
   </React.StrictMode>
 );
+
+// cart test
+window.addEventListener('keydown', e => {
+  if(e.key === 'q'){
+    console.log('localStorage.cart:', localStorage.cart);
+  }
+})

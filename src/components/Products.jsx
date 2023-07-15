@@ -41,7 +41,7 @@ function Products({products, size, ...props}) {
                             <Product 
                                 key={product.id} 
                                 product={product}
-                                animationDuration={i - shownItem > 0 ? 0.5 : 0.001}
+                                animationDuration={i - shownItem > 0 ? .5 : 0.001}
                                 animationIndex={i - shownItem} 
                                 //delay={mobileView ? `0ms` : `${(i - shownItem)*200}ms`} // this option is used when we want every string to appear onView independently
                                 setShownItem={() => {if(i > shownItem) setShownItem(i)}}

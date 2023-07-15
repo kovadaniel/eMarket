@@ -2,7 +2,7 @@ import cl from './BlackButton.module.css'
 
 function BlackButton({className, children, ...props}) {
     return (
-        <button {...props} className={`${className} ${cl.btn}`}>
+        <button {...props} className={`black-button ${cl.btn}`}>
             {children}
         </button>
     );

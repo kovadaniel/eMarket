@@ -4,6 +4,7 @@ import Single from "../pages/Single";
 import Main from "../pages/Main";
 import Products from "../pages/Products";
 import Services from "../pages/Services";
+import Cart from "../pages/Cart";
 
 export const privateRoutes = [
 
@@ -16,6 +17,8 @@ export const publicRoutes = [
     {path: '/products/:category', component: <Products/>, },
     {path: '/products', component: <Products/>, },
     {path: '/services', component: <Services/>, },
+    {path: '/cart', component: <Cart/>, },
+
 
 
 

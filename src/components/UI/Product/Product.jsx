@@ -9,15 +9,10 @@ import { useContext, useMemo } from 'react';
 import { DisplayContext } from '../../../context';
 import useLeftView from '../../../hooks/useLeftView';
 import { useEffect } from 'react';
-/*
-const productAppearVariants = {
-    visible: (i = 0) => ({opacity: 1, y: 0, transition: {duration: .5, delay: .2 * i, ease: 'easeIn'}}),
-    hidden: {opacity: 0, y: 50},     
-}
-*/
+import { addToStorage } from '../../../utils';
 
 function Product({product, animationDuration, animationIndex, setShownItem}) {
-    const {mobileView} = useContext(DisplayContext);
+    const {mobileView, setCart, cart} = useContext(DisplayContext);
 
     const navigate = useNavigate();
     const [ref, controls] = useAppearance();
@@ -25,7 +20,7 @@ function Product({product, animationDuration, animationIndex, setShownItem}) {
 
     const variants = useMemo(() => {
         return ({
-            visible: (i = 0) => ({opacity: 1, y: 0, transition: {duration: animationDuration, delay: .2 * i, ease: 'easeIn'}}),
+            visible: (i = 0) => ({opacity: 1, y: 0, transition: {duration: animationDuration, delay: .2 * i, ease: 'linear'}}),
             hidden: {opacity: 0, y: 50},     
         })
     }, [animationDuration])
@@ -45,6 +40,7 @@ function Product({product, animationDuration, animationIndex, setShownItem}) {
             initial={'hidden'}
             animate={controls}
             custom={mobileView ? 0 : animationIndex}
+            transition={{ease: "linear"}}
             onAnimationComplete={setShownItem}
         >
             <div className={cl.wrapper}>
@@ -54,7 +50,11 @@ function Product({product, animationDuration, animationIndex, setShownItem}) {
                     <div className={cl.refsWrapper}>
                         <MiniRef 
                             icon={faCartShopping} 
-                            href={'/cart'}/>
+                            href={'/cart'}
+                            onClick={e => {
+                                e.preventDefault();
+                                setCart(addToStorage(product.id, cart))
+                            }}/>
                         <MiniRef 
                             icon={faEye} 
                             href={'/single'}

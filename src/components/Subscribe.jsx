@@ -38,7 +38,7 @@ function Subscribe(props) {
                     ref={inputRef}
                 >
                     <LightInput className='subscribe-button' type={'email'} placeholder={'Email'}/>
-                    <BlackButton className='subscribe-input'>Subscribe</BlackButton>
+                    <BlackButton>Subscribe</BlackButton>
                 </motion.form>
             </div>
         </div>
